@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+  font-family: "Dosis", sans-serif;
+}
+
+body {
+  background-color: #303030;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  color: #fff;
+
+  background-color: #c4c2c2;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+#btn-container {
+}
+
+#stopwatch {
+  font-size: 100px;
+}
+
+#timer-container {
+  margin: auto;
+  max-width: 50%;
+  height: auto;
+  padding-top: 50px;
+  color: aqua;
+  background-color: #878686;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+#clock-container {
+}
+
+#title {
+  background-color: cornflowerblue;
+}
+
+#timer-btn {
+  color: #303030;
+}
