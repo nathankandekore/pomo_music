@@ -1,56 +1,81 @@
 // timer functionsallity for buttons
 // fetch Api from spotify
 const message = document.getElementById("message");
-let clock = document.getElementById("stopwatch");
-
+const shortBtn = document
+  .getElementById("short-break-btn")
+  .addEventListener("click", () => {
+    seconds = 300;
+    clock.innerText = `${Math.floor(seconds / 60)} : ${seconds % 60}`;
+  });
+const longBtn = document
+  .getElementById("long-break-btn")
+  .addEventListener("click", () => {
+    seconds = 900;
+    seconds = 900;
+    clock.innerText = `${Math.floor(seconds / 60)} : ${seconds % 60}`;
+  });
+const pomodoroBtn = document
+  .getElementById("pomodoro-break-btn")
+  .addEventListener("click", () => {
+    seconds = 1500;
+    clock.innerText = `${Math.floor(seconds / 60)} : ${seconds % 60}`;
+  });
 const startBtn = document
   .getElementById("start-btn")
   .addEventListener("click", () => {
-    decrement();
+    console.log("start clicked");
   });
-
 const resetBtn = document
   .getElementById("reset-btn")
   .addEventListener("click", () => {
-    reset();
+    console.log("reset clicked");
+    seconds = 1500;
+    testFunc();
   });
+let clock = document.getElementById("stopwatch");
 
-const decrement = function () {
-  let min = 24;
-  let sec = 59;
+let seconds = 2400;
 
-  if (sec > 0 && sec < 60) {
-    setInterval(() => {
-      sec--;
-      if (sec == 0) {
-        min--;
-        sec = 59;
-      }
-      if (sec == 0 && min == 0) {
-        message.innerHTML = `TAKE A BREAK!!`;
-      }
-
-      console.log(min, sec);
-      clock.innerHTML = `${min}:${sec}`;
-    }, 1000);
-  }
+// DISPLAY
+const testFunc = function () {
+  clock.innerText = `${Math.floor(seconds / 60)} : ${seconds % 60}`;
 };
 
-const testName = function () {
-  console.log("test");
-};
+// testFunc();
 
-const reset = function () {
-  clearInterval();
-  let min = 25;
-  let sec = 00;
-  clock.innerHTML = `${min}:${sec}`;
-};
+// COUNTDOWN
+// const decrement = function () {
+//   setInterval(() => {
+//     seconds--;
+//   }, 1000);
+//   if (seconds == 0) {
+//     clock.innerText = "TAKE A BREAK";
+//   }
+// };
 
-//reset the clock when rest button is clicked
-//"alarm when time reaches 0:00"
+// BREAKS FUNCTIONS
 
-//set the clock for 25mins pomodoro
-//set the clock for 5mins short
-//set the clock for 15mins long
-//get the single number to show as 2 digits
+// BUTTONS FUNCTIONS
+
+// const startBtn = document
+//   .getElementById("start-btn")
+//   .addEventListener("click", () => {
+//     decrement();
+//   });
+
+// const resetBtn = document
+//   .getElementById("reset-btn")
+//   .addEventListener("click", () => {
+//     // reset();
+//   });
+
+// NEW REST FUNCTION
+// AMMEND ALL THE BUTTONS
+// MUSIC PLAYER FUNCTIONALITY
+
+// const reset = function () {
+//   clearInterval();
+//   let min = 25;
+//   let sec = 00;
+//   clock.innerHTML = `${min}:${sec}`;
+// };

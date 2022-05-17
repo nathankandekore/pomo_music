@@ -9,6 +9,11 @@ body {
   padding: 0;
 }
 
+
+h1{
+  color: red;
+}
+
 button {
   color: #fff;
 
@@ -16,6 +21,18 @@ button {
   border: none;
   border-radius: 5px;
   padding: 0.5rem;
+}
+
+#pomodoro-break-btn{
+  cursor: pointer;
+}
+
+#short-break-btn{
+  cursor: pointer;
+}
+
+#long-break-btn{
+  cursor: pointer;
 }
 
 #btn-container {
