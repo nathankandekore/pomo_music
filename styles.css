@@ -45,6 +45,8 @@ cursor: pointer;
 
 #reset-btn{
 cursor: pointer;
+content: "reset";
+
 }
 
 
@@ -70,6 +72,14 @@ cursor: pointer;
 
 #title {
   background-color: cornflowerblue;
+}
+
+.test{
+  color: brown
+}
+
+.other{
+  color: green;
 }
 
 /* #timer-btn {

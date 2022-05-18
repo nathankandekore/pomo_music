@@ -1,5 +1,5 @@
-// timer functionsallity for buttons
-// fetch Api from spotify
+// VARIABLES
+
 const message = document.getElementById("message");
 let clock = document.getElementById("stopwatch");
 let seconds = 1500;
@@ -15,20 +15,7 @@ function startTimer() {
   }, 1000);
 }
 
-function resetTimer() {
-  seconds == 0;
-}
-
 // DISPLAY
-
-// const displayMins = Math.floor(seconds / 60);
-// const displaySecs = seconds % 60;
-
-// what if you stingified the value of this calculation??
-
-// function displayTimer() {
-//   clock.innerText = `${Math.floor(seconds / 60)} : ${seconds % 60}`;
-// }
 
 function displayTimer() {
   let min = Math.floor(seconds / 60);
@@ -51,7 +38,6 @@ const longBtn = document
   .getElementById("long-break-btn")
   .addEventListener("click", () => {
     seconds = 900;
-    seconds = 900;
     displayTimer();
   });
 
@@ -62,34 +48,26 @@ const pomodoroBtn = document
     displayTimer();
   });
 
-const startBtn = document
-  .getElementById("start-btn")
-  .addEventListener("click", () => {
-    console.log("start clicked");
-    startTimer();
-  });
+const startBtn = document.getElementById("start-btn");
+startBtn.addEventListener("click", () => {
+  console.log("start clicked");
+  startTimer();
+});
 
-const resetBtn = document
-  .getElementById("reset-btn")
-  .addEventListener("click", () => {
-    console.log("reset clicked");
-    // how do you go back to last timer?
-    clearInterval(timeout);
-    resetTimer();
-    displayTimer();
-  });
+const stopBtn = document.getElementById("stop-btn");
+stopBtn.addEventListener("click", () => {
+  clearInterval(timeout);
+  console.log("timer paused");
+});
 
 // CURRENT PROBLEMS:
-// reset button wont work
-// buttons interupt timer if clicked during sequence
-// single digit numbers not padded
 
-// possible solutions:
-// have one button 2 classes for reset and start
-// different functionality for different classes
+// buttons interupt timer if clicked during sequence
 
 // music player to do
 // write api request for fetch folder
 //play function to play music from api data
 
-console.log(seconds.toString());
+// let musicObject = {
+//   1: "https://www.learningcontainer.com/wp-content/uploads/2020/02/Kalimba.mp3"
+// }
