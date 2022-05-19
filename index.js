@@ -60,6 +60,19 @@ stopBtn.addEventListener("click", () => {
   console.log("timer paused");
 });
 
+fetch(
+  "https://api.spotify.com/v1/tracks/6LBpGdlukUARutol7VgWIS?si=89f38a74c82246c6",
+  {
+    method: "GET",
+    headers: {
+      Authorization:
+        "Bearer BQCtrOaCT4tkVq2dJi-CN0VDmLqMzf0vByzo_HwqZU31HZaJeh7HBis16l1Jg02j3Ol_oX4l7bR2ix97RVcmbRYk9KS_omEG1xOLzHeIO9cHpDGmVhpqI-sPzYLC76kQ30OwUuNCDF5Y6r4cYdohpmMb58Xc",
+    },
+  }
+)
+  .then((response) => response.json())
+  .then((data) => console.log(data));
+
 // CURRENT PROBLEMS:
 
 // buttons interupt timer if clicked during sequence
@@ -67,7 +80,3 @@ stopBtn.addEventListener("click", () => {
 // music player to do
 // write api request for fetch folder
 //play function to play music from api data
-
-// let musicObject = {
-//   1: "https://www.learningcontainer.com/wp-content/uploads/2020/02/Kalimba.mp3"
-// }
